@@ -14,7 +14,15 @@
   --pink-light: #BA7F8B;
   --red-light: #864040;
   --red-dark: #50282E; 
-  --off-white: #f5f5f5
+  --off-white: #f5f5f5;
+  --gray: #f6f6f7;
+  --dark-gray: #cecfce;
+
+  /*fontsize*/
+  --font-sm: 0.8rem;
+  --font-md: 1.2rem;
+  --font-lg: 2rem;
+  --font-xl: 3rem;
 }
 
 html,
@@ -24,6 +32,7 @@ body {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--gray);
 }
 
 h1 {
@@ -46,7 +55,7 @@ ul {
 
 button {
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: var(--font-md);
   background-color: var(--off-white);
   border: 1px solid var(--dark);
   border-radius: 8px;
@@ -57,6 +66,7 @@ button {
 
 .container {
   padding: 2vw 8vw;
+  width: 100%;
 }
 
 /* navigation */
@@ -67,7 +77,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   padding: 2rem 10vw;
   height: 10vh;
 }
@@ -124,11 +134,114 @@ button {
 }
 
 
-#detetives {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 20vh;
+#detetives, #contos {
   padding: 2rem 0;
 }
 
+.detetives--title, 
+.contos--title,
+.autor--title,
+.contato--title {
+  font-size: var(--font-lg);
+  text-align: center;
+}
+
+.detetives--body, .autor--body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  font-size: var(--font-md);
+}
+
+/* seção livro */
+.detetives--body__image img {
+  max-width: 500px;
+}
+
+.detetives--body__info {
+  max-width: 600px;
+}
+
+/* seção contos */
+.contos--body {
+  padding-left: 4rem;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.conto {
+  padding: 2rem;
+  margin: 1rem 0;
+  max-width: 400px;
+  border: 1px solid var(--red-dark);
+}
+
+/* seção autor */
+#autor {
+  background-color: var(--dark-gray);
+  padding: 3rem 0;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.autor--body {
+  margin: 1.5rem 0;
+}
+
+.autor--body__info,
+.autor--body__image img {
+  max-width: 400px;
+}
+
+/* seção contato */
+.contato--body {
+  margin: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contato--body__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+input, textarea {
+  font-size: 1.1rem;
+  width: 35vw;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: var(--dark);
+  border-width: 2px;
+  padding: 0.75rem 1.25rem;
+}
+
+textarea {
+  height: 15vh;
+}
+
+.contato--body__submit button {
+  padding: 1rem 2rem;
+  font-size: var(--font-md);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--dark);
+  color: var(--off-white);
+  font-size: var(--font-md);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  height: 6vh;
+}
