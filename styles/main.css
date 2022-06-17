@@ -268,3 +268,21 @@ footer {
   padding: 1rem;
   height: 6vh;
 }
+
+
+/* responsive */
+@media (max-width: 1328px) {
+  .hero {
+    height: 120vh;
+  }
+
+  .hero--box {
+    width: 60%;
+    padding: 4rem;
+    margin: 0 10vw;
+  }
+
+  .hero--info {
+    font-size: 1.3rem;
+  }
+}
