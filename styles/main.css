@@ -10,6 +10,7 @@
 
 :root {
   --dark: #242D3B;
+  --black: black;
   --yellow-light: #F0DEBF;
   --pink-light: #BA7F8B;
   --red-light: #864040;
@@ -53,7 +54,7 @@ ul {
   padding: 0;
 }
 
-button {
+button, .hero--button {
   padding: 1rem;
   font-size: var(--font-md);
   background-color: var(--off-white);
@@ -72,7 +73,7 @@ button {
 /* navigation */
 
 #navbar {
-  background-color: black;
+  background-color: var(--black);
   color: var(--off-white);
   display: flex;
   justify-content: space-between;
@@ -122,11 +123,32 @@ button {
 	font-weight: 300;
 }
 
+.hero--cta {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .hero--button {
   margin-top: 1.5rem;
   border: none;
   display: flex;
   justify-content: center;
+  width: 160px;
+}
+
+.button-buy {
+  background-color: var(--black);
+  border: 1px solid var(--off-white);
+  color: var(--off-white) !important;
+}
+
+.button-buy:hover {
+  color: var(--dark) !important;
+}
+
+.hero--button:hover {
+  background: var(--dark-gray);
 }
 
 .hero--button__icon {
@@ -171,6 +193,7 @@ button {
   margin: 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
   text-align: center;
 }
 
