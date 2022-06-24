@@ -17,7 +17,7 @@
   --red-dark: #50282E; 
   --off-white: #f5f5f5;
   --gray: #f6f6f7;
-  --dark-gray: #cecfce;
+  --dark-gray: #dfdfdf;
 
   /*fontsize*/
   --font-sm: 0.8rem;
@@ -54,7 +54,7 @@ ul {
   padding: 0;
 }
 
-button, .hero--button {
+button, .btn, .hero--button {
   padding: 1rem;
   font-size: var(--font-md);
   background-color: var(--off-white);
@@ -147,7 +147,7 @@ button, .hero--button {
   color: var(--dark) !important;
 }
 
-.hero--button:hover {
+.hero--button:hover, .btn:hover {
   background: var(--dark-gray);
 }
 
@@ -187,6 +187,14 @@ button, .hero--button {
   max-width: 600px;
 }
 
+.detetives--body__button {
+  display: block;
+  width: 55%;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1.5rem auto 0;
+}
+
 /* seção contos */
 .contos--body {
   padding-left: 4rem;
@@ -201,7 +209,30 @@ button, .hero--button {
   padding: 2rem;
   margin: 1rem 0;
   max-width: 400px;
-  border: 1px solid var(--red-dark);
+  /* border: 1px solid var(--red-dark); */
+  background: no-repeat url('../imgs/contos-bg-01.png');
+  background-size: cover;
+}
+
+.conto--info {
+  margin: 2rem -1.5rem 1rem 1rem;
+}
+
+.contos--action {
+  display: flex;
+  justify-content: center;
+}
+
+.contos--action__button {
+  background-color: var(--black);
+  color: var(--off-white) !important;
+  width: 20%;
+  padding: 1.5rem;
+  font-size: var(--font-md);
+}
+
+.contos--action__button:hover {
+  color: var(--dark) !important;
 }
 
 /* seção autor */
@@ -216,7 +247,10 @@ button, .hero--button {
   margin: 1.5rem 0;
 }
 
-.autor--body__info,
+.autor--body__info {
+  max-width: 500px;
+}
+
 .autor--body__image img {
   max-width: 400px;
 }
