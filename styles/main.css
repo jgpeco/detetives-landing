@@ -349,16 +349,22 @@ footer {
 /* responsiveness */
 
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+
   /* navbar responsive */
   #navbar {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: 120px;
   }
 
   /* hero responsive */
   .hero {
-    height: 80vh;
+    height: 90vh;
+    height: -webkit-fill-available;
   }
 
   .hero--box {
@@ -422,7 +428,7 @@ footer {
 
   /* autor section responsive */
   #autor {
-    padding: 1.75rem;
+    padding: 1.25rem;
   }
 
   .autor--body {
@@ -430,6 +436,10 @@ footer {
   }
 
   /* form responsive */
+  #contato {
+    max-width: 360px;
+  }
+  
   .contato--body {
     margin: 0.75rem 0.25rem 1rem;
     gap: 1.75rem;
