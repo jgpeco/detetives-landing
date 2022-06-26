@@ -369,6 +369,7 @@ footer {
 
   .hero--title {
     margin-top: 1rem;
+    font-size: calc(0.5rem + 18vmin);;
   }
 
   .hero--info {
